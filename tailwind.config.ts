@@ -18,7 +18,15 @@ const config: Config = {
         'green-muda':'#e0fcff',
         'green-tua': '#a5e6ed',
         'blue-tua': '#0f2a43',
+        'greentua':'#13919b;'
       },
+      listStyleType: {
+        none: 'none',
+        disc: 'disc',
+        decimal: 'decimal',
+        square: 'square',
+        roman: 'upper-roman',
+      }
     },
   },
   plugins: [],

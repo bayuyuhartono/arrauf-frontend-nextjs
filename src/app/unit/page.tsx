@@ -1,9 +1,9 @@
 export default function Unit() {
     return(
-        <div className="w-full h-full justify-items-center">
+        <div className="w-full h-full justify-items-center mb-7">
             <div className="flex flex-row w-[1000px] h-[640px] items-center justify-center">
-                <img src="LOGO-YAYASAN-TRANSPARENCY.png" alt="icon" className="w-[430px] h-[600px] mr-8" />
-                <div className="text-xl font-serif w-[50%]">
+                <img src="LOGO-YAYASAN-TRANSPARENCY.png" alt="icon" className="w-[350px] h-[600px] mr-8" />
+                <div className="text-xl font-serif w-[50%] text-justify">
                     <h1 className="text-4xl font-bold text-blue-tua">Unit Usaha</h1>
                     <br />
                     <p>

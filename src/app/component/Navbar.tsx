@@ -22,7 +22,7 @@ export default function Navbar() {
                     href="/unit"
                     className="px-3 hover:text-orange-400">Unit Usaha</Link>
                     <Link 
-                    href={""}
+                    href="/about"
                     className="px-3 hover:text-orange-400">Tentang Kami</Link>
                     <Link 
                     href={""}
