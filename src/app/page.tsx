@@ -13,8 +13,7 @@ import CardEkstrakulikuler from "./component/CardEkstrakulikuler";
 
 export default function Home() {
   const[data, setData] = useState<Arrauf>();
-  const baseURL = 'https://api.ar-rauf.org'
-  const adminBaseURL = 'https://admin.ar-rauf.org/'
+  const baseURL = process.env.NEXT_PUBLIC_API_URL
 
   const getData = async() => {
     await axios
@@ -29,7 +28,7 @@ export default function Home() {
   function newWindow() {
     window.open(data?.data.ppdb.link)
     console.log(newWindow);
-}
+  }
 
   return (
     <div className="w-full h-full">
@@ -108,10 +107,10 @@ export default function Home() {
           })}
         </div>
       </div>
-      <div className={`bg-[url('${adminBaseURL + data?.data.wallpaper.wallpaper_image}')] flex flex-col w-full h-72 justify-center items-center font-serif text-blue-tua my-10`}>
+      <div className={`bg-[url('${process.env.NEXT_PUBLIC_ADMIN_URL} + ${data?.data?.wallpaper?.wallpaper_image}')] flex flex-col w-full h-72 justify-center items-center font-serif text-blue-tua my-10`}>
         <h3 className="text-4xl my-3 ">
           Daftarkan Putra & Putri Anda Segera
-          {data?.data?.wallpaper?.wallpaper_text}
+          {/* {data?.data?.wallpaper?.wallpaper_text} */}
         </h3>
         <h3>
         “Mencetak generasi yang cerdas, berkualitas dan berakhlak mulia sesuai pemahaman Salaf As-Shalih.”

@@ -1,10 +1,25 @@
 "use client"
 
-import { Ppdb } from "../types/arrauf";
+import { useEffect, useState } from "react";
+import { ppdbType } from "../types/arrauf";
+import axios from "axios";
 
-export default function Daftar(props : {data : Ppdb}) {
+export default function Daftar() {
+    const[data, setData] = useState<ppdbType>();
+  const baseURL = process.env.NEXT_PUBLIC_API_URL
+
+  const getData = async() => {
+    await axios
+    .get(`${baseURL}/cms/ppdb`)
+    .then(Response => {setData(Response.data)})
+  }
+
+  useEffect(() => {
+    getData()
+  },[])
+  
     function newWindow() {
-        window.open(props?.data?.link)
+        window.open(data?.data.link)
     }
     return(
         <div className="w-full h-full justify-items-center">

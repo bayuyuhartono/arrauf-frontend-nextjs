@@ -54,7 +54,7 @@ export interface Arrauf {
     caption: string
     image: string
     updated_at: string
-    updated_by: any
+    updated_by?: string
   }
   
   export interface Ekstrakulikuler {
@@ -65,6 +65,12 @@ export interface Arrauf {
     caption: string
     image: string
     updated_at: string
-    updated_by: any
+    updated_by?: string
   }
   
+
+  export interface ppdbType {
+    success: boolean
+    message: string
+    data: Ppdb
+  }

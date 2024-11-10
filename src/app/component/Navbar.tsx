@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Unit from "../unit/page";
 
 export default function Navbar() {
     return(
@@ -16,7 +15,7 @@ export default function Navbar() {
                     href="/tk"
                     className="px-3 hover:text-orange-400">TK</Link>
                     <Link 
-                    href={""}
+                    href={"/sd"}
                     className="px-3 hover:text-orange-400">SD</Link>
                     <Link 
                     href="/unit"
@@ -27,9 +26,9 @@ export default function Navbar() {
                     <Link 
                     href={""}
                     className="px-3 hover:text-orange-400">Kontak Kami</Link>
-                    <Link 
+                    {/* <Link 
                     href={""}
-                    className="px-3 hover:text-orange-400">News</Link>
+                    className="px-3 hover:text-orange-400">News</Link> */}
                     <Link 
                     href="/daftar"
                     className="px-3 hover:text-orange-400">Daftar PPDB</Link>

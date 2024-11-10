@@ -1,11 +1,11 @@
 
-export default function Tk(){
+export default function Sd(){
     return(
         <div className="flex flex-col w-full h-full font-serif text-lg">
-            <h3 className="text-blue-tua text-4xl font-bold mb-8 text-center">TK</h3>
+            <h3 className="text-blue-tua text-4xl font-bold mb-8 text-center">SD</h3>
             <div className="">
                 <img src="/arrauf.jpg" alt="" className="w-full h-[450px] object-cover" />
-                <h3 className="text-">TK Ar Rauf Islamic school</h3>
+                <h3 className="text-">SD Ar Rauf Islamic school</h3>
             </div>
             <div className="font-serif my-14">
                 <h3 className="text-5xl text-center font-bold">Sambutan Kepala Sekolah</h3>
@@ -16,7 +16,7 @@ export default function Tk(){
                     </p>
                     <br />
                     <p>
-                    Kami segenap Guru dan Staf TK AR RAUF ISLAMIC SCHOOL, menyambut baik calon Siswa-siswi atau orang tua murid untuk bergabung di TK AR RAUF ISLAMIC SCHOOL, Mudah-mudahan Kita dapat melaksanakan amanah ini dengan sebaik-baiknya.
+                    Kami segenap Guru dan Staf SD AR RAUF ISLAMIC SCHOOL, menyambut baik calon Siswa-siswi atau orang tua murid untuk bergabung di SD AR RAUF ISLAMIC SCHOOL, Mudah-mudahan Kita dapat melaksanakan amanah ini dengan sebaik-baiknya.
                     </p>
                 </div>
             </div>
