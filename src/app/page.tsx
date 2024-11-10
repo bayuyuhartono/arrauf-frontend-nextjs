@@ -1,20 +1,20 @@
 "use client"
 
 import Link from "next/link";
-import { IoIosWater } from "react-icons/io";
 import Card from "./component/Card";
 import CardTestimoni from "./component/CardTestimoni";
-import Kurikulum from "./Kurikulum/page";
 import { useEffect, useState } from "react";
 import { Arrauf } from "./types/arrauf";
 import axios from "axios";
 import CardBenefit from "./component/CardBenefit";
 import CardMotto from "./component/CardMotto";
 import { RiFlowerFill } from "react-icons/ri";
+import CardEkstrakulikuler from "./component/CardEkstrakulikuler";
 
 export default function Home() {
   const[data, setData] = useState<Arrauf>();
   const baseURL = 'https://api.ar-rauf.org'
+  const adminBaseURL = 'https://admin.ar-rauf.org/'
 
   const getData = async() => {
     await axios
@@ -25,6 +25,11 @@ export default function Home() {
   useEffect(() => {
     getData()
   },[])
+
+  function newWindow() {
+    window.open(data?.data.ppdb.link)
+    console.log(newWindow);
+}
 
   return (
     <div className="w-full h-full">
@@ -96,24 +101,26 @@ export default function Home() {
       <div className="flex flex-col justify-center items-center">
         <h3 className="text-center font-serif text-4xl text-blue-tua my-8">Ekstrakulikuler</h3>
         <div className="grid grid-cols-3 w-[60%] gap-8">
-          {/* <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/> */}
+        {data?.data.ekstrakulikuler.map((item, index) => {
+            return (
+              <CardEkstrakulikuler key={index} data={item}/>
+            )
+          })}
         </div>
       </div>
-      <div className="flex flex-col w-full h-72 justify-center items-center font-serif bg-slate-100 text-blue-tua my-10">
+      <div className={`bg-[url('${adminBaseURL + data?.data.wallpaper.wallpaper_image}')] flex flex-col w-full h-72 justify-center items-center font-serif text-blue-tua my-10`}>
         <h3 className="text-4xl my-3 ">
           Daftarkan Putra & Putri Anda Segera
+          {data?.data?.wallpaper?.wallpaper_text}
         </h3>
         <h3>
         “Mencetak generasi yang cerdas, berkualitas dan berakhlak mulia sesuai pemahaman Salaf As-Shalih.”
         </h3>
-        <Link 
-            href="/daftar"
-            className="w-56 h-14 my-8 bg-green text-white font-serif text-center text-xl py-3 rounded-md hover:bg-greentua">Daftar Sekarang</Link>
+        <button 
+            onClick={newWindow}
+            className="w-56 h-14 my-8 bg-green text-white font-serif text-center text-xl py-3 rounded-md hover:bg-greentua"
+            >Daftar Sekarang
+        </button>
       </div>
       <div className="flex flex-col justify-center items-center my-10">
         <h3 className="text-center font-serif text-5xl text-greentua font-bold my-8">Testimoni tentang Sekolah Kami </h3>
