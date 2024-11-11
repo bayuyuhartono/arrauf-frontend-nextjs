@@ -81,11 +81,13 @@ export default function Home() {
       <div className="flex flex-col w-full text-center text-blue-tua font-serif text-base">
         <h3 className="text-blue-tua font-bold my-6">MOTTO</h3>
         <h3 className="text-blue-tua text-4xl mb-8">{data?.data.quote.quote_sub}</h3>
+        <div className="flex flex-col mx-28">
         {data?.data.motto.map((item, index) => {
             return (
               <CardMotto key={index} data={item}/>
             )
           })}
+        </div>
       </div>
       <div className="flex flex-col justify-center items-center">
         <h3 className="text-center font-serif text-4xl text-blue-tua my-8">Kegiatan Sekolah</h3>
