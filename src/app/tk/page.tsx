@@ -4,7 +4,6 @@ import axios from "axios"
 import CardMotto from "../component/CardMotto"
 import { useEffect, useState } from "react";
 import { Arrauf } from "../types/arrauf";
-import CardBenefit from "../component/CardBenefit";
 
 export default function Tk(){
     const[data, setData] = useState<Arrauf>();
@@ -97,11 +96,11 @@ export default function Tk(){
                     <h3 className="text-3xl text-left font-bold mb-4">Target Hafalan</h3>
                     <h3 className="text-left font-bold mb-4 text-xl">Kelompok A :</h3>
                     <li>Qs.Al Zalzalah (Minimal)</li>
-                    <li>Qs.Al Zalzalah (Minimal)</li>
+                    <li>Qs. Al A’la (Maximal)</li>
                     <br />
                     <h3 className="text-left font-bold mb-4 text-xl">Kelompok B :</h3>
-                    <li>Qs.Al Zalzalah (Minimal)</li>
-                    <li>Qs.Al Zalzalah (Minimal)</li>
+                    <li>Qs At Tiin (Minimal)</li>
+                    <li>Qs. An Naba (Maximal)</li>
                 </div>
             </div>
             <div className="font-serif mx-36 mb-4">
@@ -160,6 +159,9 @@ export default function Tk(){
                         </li>
                         <li>
                             Silaturrahmi/berkunjung kerumah teman dan saudara.
+                        </li>
+                        <li>
+                            Membantu orang tua.
                         </li>
                     </ul>
                 </div>

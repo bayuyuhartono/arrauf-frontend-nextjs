@@ -15,7 +15,7 @@ export default function Navbar() {
                     href="/tk"
                     className="px-3 hover:text-orange-400">TK</Link>
                     <Link 
-                    href={"/sd"}
+                    href="/sd"
                     className="px-3 hover:text-orange-400">SD</Link>
                     <Link 
                     href="/unit"
